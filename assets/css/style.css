@@ -1,0 +1,47 @@
+/* ------------------- FONTS ------------------- */
+
+@font-face {
+    font-family: 'Sabon';
+    src: url('../fonts/SabonLTStd-Roman.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sabon Italic';
+    src: url('../fonts/SabonLTStd-Italic.otf') format('opentype');
+}
+
+/* ------------------- STYLE ------------------- */
+
+body {
+    padding: 5px;
+    font-family: 'Sabon';
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    mix-blend-mode: difference;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+footer {
+
+}
+
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+@media screen and (min-width: 800px) {
+    body {
+        width: 40%;
+    }
+}
+
+
+
+/* ------------------- PRINT CSS ------------------- */
