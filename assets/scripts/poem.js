@@ -186,13 +186,12 @@ poemContainer.innerHTML = firstPhrases.join('');
 
 
 
-
-
-
 // REFRESH ON MOVEMENT
 
-addEventListener('devicemotion', (event) => { });
+window.addEventListener('devicemotion', (event) => {
+    console.log("motion");
+});
 
-ondevicemotion = (event) => { };
+// ondevicemotion = (event) => { };
 
 
