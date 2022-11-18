@@ -165,7 +165,7 @@ poemContainer.innerHTML = firstPhrases.join('');
 
 // REFRESH ON MOVEMENT
 
-window.addEventListener('devicemotion', (shuffle) => {
+window.addEventListener('devicemotion', shuffle) => {
     poemContainer.innerHTML = firstPhrases.join('');
 });
 
