@@ -45,3 +45,9 @@ footer {
 
 
 /* ------------------- PRINT CSS ------------------- */
+
+@media print {
+    footer {
+        display: none;
+    }
+ }
