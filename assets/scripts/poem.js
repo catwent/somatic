@@ -165,8 +165,8 @@ poemContainer.innerHTML = firstPhrases.join('');
 
 // REFRESH ON MOVEMENT
 
-window.addEventListener('devicemotion', (writePoem) => {
-    console.log(phrases);
+window.addEventListener('devicemotion', (shuffle) => {
+    poemContainer.innerHTML = firstPhrases.join('');
 });
 
 // ondevicemotion = (event) => { };
