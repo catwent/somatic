@@ -43,12 +43,7 @@ var phrases = [
     'stretching ',
     'straining ',
     
-    
-    
-    
-    
     'with the quivering nausea of uncertain timeframes ',
-    
     'people from ',
     'my mobile private property ',
     'invaded and trespassed ',
@@ -56,30 +51,19 @@ var phrases = [
     'looking through a ',
     'with only 12 megapixel vision ',
     'a window opens to ',
-    'Search ',
+    'search ',
     'what you are searching for is not found ',
     'undo writing ',
     'cancel ',
     'save page as ',
-    
-    
-    
-    
-    
-    
     'ringing ears ',
     'mounting fluid pressure ',
     'a flood of awareness rushing to my head ',
     'ears hot with cognition ',
     'the hush of next year’s forgotten seeds ',
     'scuffed by heels grinding progress to a halt ',
-    
-    
-    
-    
     'teach me how to play the strings ',
     'by any formula ',
-    
     'building a world through experience ',
     'and yellow border ',
     'working with other people’s garbage ',
@@ -93,8 +77,6 @@ var phrases = [
     'as if from a magicians hat ',
     'yes, there are ants on the ground ',
     'but every step can’t be its own project ',
-    
-    
     'a honk ',
     'a high pitched whirr ',
     'a brake squeals ',
@@ -143,7 +125,6 @@ var poemContainer = document.getElementById("poem");
 
 
 
-
 // RANDOMIZE ARRAY FUNCTION
 
 function shuffle(array) {
@@ -169,6 +150,7 @@ function shuffle(array) {
 
 // FUNCTION TO SHUFFLE AND PLACE FIRST N IN HTML
 function writePoem {
+
     // SHUFFLE POETRY PHRASES
     shuffle(phrases);
     console.log(phrases);
@@ -178,6 +160,7 @@ function writePoem {
 
     // PLACE POETRY PHRASES
     poemContainer.innerHTML = firstPhrases.join('');
+
 };
 
 
@@ -185,8 +168,8 @@ function writePoem {
 
 // REFRESH ON MOVEMENT
 
-window.addEventListener('devicemotion', (event) => {
-    writePoem;
+window.addEventListener('devicemotion', (writePoem) => {
+    console.log(phrases);
 });
 
 // ondevicemotion = (event) => { };
