@@ -86,7 +86,7 @@ var phrases = [
     'staggering through convenience store hymns ',
     'on the moderate hills that should be parks ',
     'there is a spare car key his wife keeps hidden ',
-    'Looking at the process in reverse ',
+    'looking at the process in reverse ',
     'the fiery form of rain puddles ',
     'leaves divided ',
     'a pop up store ',
@@ -188,9 +188,9 @@ poemContainer.innerHTML = firstPhrases.join('');
 
 // REFRESH ON MOVEMENT
 
-window.addEventListener('devicemotion', (event) => {
-    console.log("motion");
-});
+// window.addEventListener('devicemotion', (event) => {
+//     console.log("motion");
+// });
 
 // ondevicemotion = (event) => { };
 
