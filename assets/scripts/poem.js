@@ -148,29 +148,26 @@ function shuffle(array) {
 
 
 
-// FUNCTION TO SHUFFLE AND PLACE FIRST N IN HTML
-function writePoem {
 
-    // SHUFFLE POETRY PHRASES
-    shuffle(phrases);
-    console.log(phrases);
+// SHUFFLE POETRY PHRASES
+shuffle(phrases);
+console.log(phrases);
 
-    // ONLY GET THE FIRST N PHRASES
-    const firstPhrases = phrases.slice(0, 12);
+// ONLY GET THE FIRST N PHRASES
+const firstPhrases = phrases.slice(0, 12);
 
-    // PLACE POETRY PHRASES
-    poemContainer.innerHTML = firstPhrases.join('');
+// PLACE POETRY PHRASES
+poemContainer.innerHTML = firstPhrases.join('');
 
-};
 
 
 
 
 // REFRESH ON MOVEMENT
 
-// window.addEventListener('devicemotion', (writePoem) => {
-//     console.log(phrases);
-// });
+window.addEventListener('devicemotion', (writePoem) => {
+    console.log(phrases);
+});
 
 // ondevicemotion = (event) => { };
 
