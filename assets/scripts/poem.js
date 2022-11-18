@@ -188,9 +188,10 @@ poemContainer.innerHTML = firstPhrases.join('');
 
 // REFRESH ON MOVEMENT
 
-// window.addEventListener('devicemotion', (event) => {
-//     console.log("motion");
-// });
+window.addEventListener('devicemotion', (event) => {
+    shuffle(phrases);
+    poemContainer.innerHTML = firstPhrases.join('');
+});
 
 // ondevicemotion = (event) => { };
 
