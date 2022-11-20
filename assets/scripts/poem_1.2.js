@@ -1,5 +1,4 @@
 // INPUT POETRY PHRASES
-
 var phrases = [
     'a low hum ',
     'a high pitched whirr ',
@@ -115,17 +114,8 @@ var phrases = [
 
 
 
-// GET DIV TO PLACE POETRY
 
-var poemContainer = document.getElementById("poem");
-
-
-
-
-
-
-
-// RANDOMIZE ARRAY FUNCTION
+// RANDOMIZE ARRAY
 
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -149,31 +139,132 @@ function shuffle(array) {
 
 
 
+
+
+
+// REQUEST DEVICE MOTION PERMISSIONS AND LOG
+
+console.log('devicemotion')
+
+        // ON CLICK
+        document.addEventListener('click', (event) => {
+
+            console.log('click');
+
+            //REMOVE CLICK DIV
+            document.getElementById("clickToBegin").style.display = "none";
+
+            // REQUEST PERMISSIONS
+            DeviceMotionEvent.requestPermission()
+                .then(permissionState => {
+
+                    // PERMISSION GRANTED
+                    if (permissionState === 'granted') {
+
+                        // HANDLE MOTION EVENT LISTENER EVENT
+                        // window.addEventListener('devicemotion', (event) => { 
+                        //     console.log(event.acceleration.x);
+                        // });
+
+                        // HANDLE DEVICE ORIENTATION LISTENER EVENT
+                        window.addEventListener('deviceorientation', (event) => {
+
+                            // NAME DEGREES (POSITIVE, WHOLE NUMBERS)
+                            var alphaDegrees = Math.floor(event.alpha + 180);
+                            var betaDegrees = Math.floor(event.beta + 180);
+                            var gammaDegrees = Math.floor(event.gamma + 180);
+
+                            // NAME INDICES FOR POETRY
+                            var alphaIndex = Math.floor(alphaDegrees / 12) * 12;
+                            var betaIndex = Math.floor(betaDegrees / 12) * 12 + 20;
+                            var gammaIndex = Math.floor(gammaDegrees / 12) * 12 + 40;
+
+                            // GET PHRASES PER INDICES
+                            var alphaPhrase = phrases[alphaIndex];
+                            var betaPhrase = phrases[betaIndex];
+                            var gammaPhrase = phrases[gammaIndex];
+                            console.log(betaPhrase);
+
+                            // PLACE POETRY PHRASES
+                            var poemContainer = document.getElementById("poem");
+                            poemContainer.innerHTML = alphaPhrase + betaPhrase + gammaPhrase;
+
+                        });
+                    }
+                })
+                .catch(console.error);
+        })
+        
+
+
+
+
+
+
+// BACKGROUND VIDEO
+
+// if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+//     console.log("user camera is accessible")
+//     navigator.mediaDevices.getUserMedia({video: true})
+//     {
+//         video: {
+//             width: {
+//             min: 1280;
+//             ideal: 1920;
+//             max: 2560;
+//             }
+//             height: {
+//             min: 720;
+//             ideal: 1080;
+//             max: 1440;
+//             }
+//             facingMode: 'environment';
+//         }
+//     }
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // SHUFFLE POETRY PHRASES
-shuffle(phrases);
-console.log(phrases);
+// shuffle(phrases);
 
 // ONLY GET THE FIRST N PHRASES
-const firstPhrases = phrases.slice(0, 12);
+// const firstPhrases = phrases.slice(0, 12);
 
-// PLACE POETRY PHRASES
-poemContainer.innerHTML = firstPhrases.join('');
-
-
-
-
-
-// REFRESH ON MOVEMENT
-
-window.addEventListener('devicemotion', (event) => {
-    console.log('event');
-});
-
-// ondevicemotion = (event) => { };
-
-
-// Divide up the 360 degrees of alpha, beta, gamma, get the deree and math.floor
-
-// add 180 degrees to value so no negtive numbers
-// index = Math.floor(degrees / 10)
-// phrases[index]
+//APPEND THIS TO JOIN ARRAY PHRASES WITHOUT COMMAS
+//.join('')

@@ -11,9 +11,6 @@
 }
 
 
-
-
-
 /* ------------------- STYLE ------------------- */
 
 body {
@@ -34,20 +31,20 @@ a:visited {
 }
 
 footer {
-
+    position: fixed;
+    padding: 5px;
+    bottom: 0;
+    left: 0;
 }
-
-
 
 
 /* ------------------- MEDIA QUERIES ------------------- */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width:800px) {
     body {
-        width: 40%;
+        width: 400px;
     }
 }
-
 
 
 /* ------------------- PRINT CSS ------------------- */
