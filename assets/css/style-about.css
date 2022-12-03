@@ -1,16 +1,3 @@
-/* ------------------- CSS RESET ------------------- */
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* html,
-body {
-  background-color: #fff;
-} */
-
 /* ------------------- FONTS ------------------- */
 
 @font-face {
@@ -25,27 +12,16 @@ body {
 
 /* ------------------- STYLE ------------------- */
 
-/* text {
+text {
   color: black;
-} */
+}
 
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: "Sabon";
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -0.5px;
   position: relative;
-}
-
-canvas {
-  z-index: -20;
-  position: fixed;
-  inset: 0;
-  filter: blur(28px);
-  transform: scale(1.3);
-  overflow: hidden;
 }
 
 a {
@@ -57,28 +33,16 @@ a:visited {
   color: inherit;
 }
 
-#clickToBegin {
+.info {
   padding: 5px;
-}
-
-.poem-container {
-  position: fixed;
-  mix-blend-mode: difference;
-  color: darkgray;
-}
-
-#poem {
-  z-index: 50;
-  padding: 5px;
-  width: auto;
-  height: auto;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
 }
 
 footer {
-  z-index: 100;
   padding: 5px;
-  color: darkgray;
-  mix-blend-mode: difference;
   position: fixed;
   bottom: 0;
   left: 0;

@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Somatic</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <video
+      id="video"
+      autoplay="true"
+      webkit-playsinline
+      playsinline
+      style="display: none"
+    ></video>
+    <canvas id="canvas"></canvas>
     <!-- <div id="desktopNotification">(please visit this site on a mobile device)</div> -->
     <div id="clickToBegin">(touch)</div>
-    <div id="poem"></div>
+    <div class="poem-container">
+      <p id="poem"></p>
+    </div>
     <footer>
-        <br>
-        <a href="about.html">(about this site)</a>
+      <br />
+      <a href="about.html">(about this site)</a>
     </footer>
-    <script src="assets/scripts/poem_1.2.js"></script>
-</body>
+    <script src="assets/scripts/poem_1.3.js"></script>
+  </body>
 </html>
